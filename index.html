@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="view1">
+        <div class="top">
+            <span class="title">Calendar</span>
+            <select name="filter" id="filter" class="dropdown">
+                <option value="all">All members</option>
+                <option value="michael">Michael</option>
+                <option value="sergey">Sergey</option>
+                <option value="ivan">Ivan</option>
+                <option value="olga">Olga</option>
+            </select>
+            <button class="create-btn"><a href="/add_event.html" 
+                target="popup" 
+                onclick="window.open('/add_event.html','popup','width=600, height=530'); return false;">
+                New event +
+              </a></button>
+        </div>
+        <div class="container">
+            <div class="calendar">
+                <div class="table_header">
+                    <div class="header_slot">Time</div>
+                    <div class="header-slot">Monday</div>
+                    <div class="header-slot">Tuesday</div>
+                    <div class="header-slot">Wednesday</div>
+                    <div class="header-slot">Thursday</div>
+                    <div class="header-slot">Friday</div>
+                </div>
+                <div class="row">
+                    <div class="time">10:00</div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"> </div>
+                    <div class="blank_slot"> </div>
+                    <div class="blank_slot"> </div>
+                    <div class="blank_slot"> </div>
+                </div>
+                <div class="row">
+                    <div class="time">11:00</div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                </div>
+                <div class="row">
+                    <div class="time">12:00</div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                </div>
+                <div class="row">
+                    <div class="time">13:00</div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                </div>
+                <div class="row">
+                    <div class="time">14:00</div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                </div>
+                <div class="row">
+                    <div class="time">15:00</div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                </div>
+                <div class="row">
+                    <div class="time">16:00</div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                </div>
+                <div class="row">
+                    <div class="time">17:00</div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                </div>
+                <div class="row">
+                    <div class="time">18:00</div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                    <div class="blank_slot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="app.js"></script>
+
+</html>
