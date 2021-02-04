@@ -19,11 +19,9 @@
                 <option value="ivan">Ivan</option>
                 <option value="olga">Olga</option>
             </select>
-            <button class="create-btn"><a href="add_event.html" 
-                target="popup" 
-                onclick="window.open('add_event.html','popup','width=600, height=530'); return false;">
-                New event +
-              </a></button>
+            <button class="create-btn"><a href="#">
+                    New event +
+                </a></button>
         </div>
         <div class="container">
             <div class="calendar">
@@ -110,7 +108,74 @@
             </div>
         </div>
     </div>
-    
+    <div class="popup">
+        
+    </div>
+    <!---<div class="occupied">
+        <div class="eventinfo"></div>
+        <button class="deletebtn">X</button>
+    </div>--->
+    <div class="view2">
+        <div class="errormsg_wrapper">
+            <div class="errormsg_container">
+                Failed to create an event. Time slot is already booked.
+            </div>
+        </div>
+        <form class="form">
+            <div class="formline">
+                <div class="formtext">
+                    Name of the event:
+                </div><input type="text" class="name-input"> <br>
+            </div>
+            <div class="formline">
+                <div class="formtext">
+                    Participants:
+                </div><select size="5" multiple name="members" id="members">
+                    <option value="all">All members</option>
+                    <option value="michael">Michael</option>
+                    <option value="sergey">Sergey</option>
+                    <option value="ivan">Ivan</option>
+                    <option value="olga">Olga</option>
+                </select>
+            </div>
+            <div class="formline">
+                <div class="formtext">
+                    Day:
+                </div><select name="days" id="days">
+                    <option value="mon">Monday</option>
+                    <option value="tue">Tuesday</option>
+                    <option value="wed">Wednesday</option>
+                    <option value="thu">Thursday</option>
+                    <option value="fri">Friday</option>
+                </select>
+            </div>
+            <div class="formline">
+                <div class="formtext">
+                    Time:
+                </div><select name="time" id="time">
+                    <option value="10">10:00</option>
+                    <option value="11">11:00</option>
+                    <option value="12">12:00</option>
+                    <option value="13">13:00</option>
+                    <option value="14">14:00</option>
+                    <option value="15">15:00</option>
+                    <option value="16">16:00</option>
+                    <option value="17">17:00</option>
+                    <option value="18">18:00</option>
+                </select>
+            </div>
+
+            <div class="button-container">
+                <button class="formbutton" onclick="window.open('', '_self', ''); window.close();">
+                    Cancel
+                </button>
+                <button class="formbutton submit">
+                    Create
+                </button>
+            </div>
+
+        </form>
+    </div>
 </body>
 <script src="app.js"></script>
 
