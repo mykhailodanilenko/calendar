@@ -19,14 +19,14 @@
                 <option value="ivan">Ivan</option>
                 <option value="olga">Olga</option>
             </select>
-            <button class="create-btn"><a href="#">
+            <button class="create-btn" onclick="document.querySelector('.view1').style.visibility='hidden'; document.querySelector('.view2').style.visibility='visible'">
                     New event +
-                </a></button>
+                </button>
         </div>
         <div class="container">
             <div class="calendar">
                 <div class="table_header">
-                    <div class="header_slot">Time</div>
+                    <div class="header-slot">Time</div>
                     <div class="header-slot">Monday</div>
                     <div class="header-slot">Tuesday</div>
                     <div class="header-slot">Wednesday</div>
@@ -35,75 +35,75 @@
                 </div>
                 <div class="row">
                     <div class="time">10:00</div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"> </div>
-                    <div class="blank_slot"> </div>
-                    <div class="blank_slot"> </div>
-                    <div class="blank_slot"> </div>
+                    <div class="blank_slot mon10"></div>
+                    <div class="blank_slot tue10"> </div>
+                    <div class="blank_slot wed10"> </div>
+                    <div class="blank_slot thu10"> </div>
+                    <div class="blank_slot fri10"> </div>
                 </div>
                 <div class="row">
                     <div class="time">11:00</div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
+                    <div class="blank_slot mon11"></div>
+                    <div class="blank_slot tue11"> </div>
+                    <div class="blank_slot wed11"> </div>
+                    <div class="blank_slot thu11"> </div>
+                    <div class="blank_slot fri11"> </div>
                 </div>
                 <div class="row">
                     <div class="time">12:00</div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
+                    <div class="blank_slot mon12"></div>
+                    <div class="blank_slot tue12"> </div>
+                    <div class="blank_slot wed12"> </div>
+                    <div class="blank_slot thu12"> </div>
+                    <div class="blank_slot fri12"> </div>
                 </div>
                 <div class="row">
                     <div class="time">13:00</div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
+                    <div class="blank_slot mon13"></div>
+                    <div class="blank_slot tue13"> </div>
+                    <div class="blank_slot wed13"> </div>
+                    <div class="blank_slot thu13"> </div>
+                    <div class="blank_slot fri13"> </div>
                 </div>
                 <div class="row">
                     <div class="time">14:00</div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
+                    <div class="blank_slot mon14"></div>
+                    <div class="blank_slot tue14"> </div>
+                    <div class="blank_slot wed14"> </div>
+                    <div class="blank_slot thu14"> </div>
+                    <div class="blank_slot fri14"> </div>
                 </div>
                 <div class="row">
                     <div class="time">15:00</div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
+                    <div class="blank_slot mon15"></div>
+                    <div class="blank_slot tue15"> </div>
+                    <div class="blank_slot wed15"> </div>
+                    <div class="blank_slot thu15"> </div>
+                    <div class="blank_slot fri15"> </div>
                 </div>
                 <div class="row">
                     <div class="time">16:00</div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
+                    <div class="blank_slot mon16"></div>
+                    <div class="blank_slot tue16"> </div>
+                    <div class="blank_slot wed16"> </div>
+                    <div class="blank_slot thu16"> </div>
+                    <div class="blank_slot fri16"> </div>
                 </div>
                 <div class="row">
                     <div class="time">17:00</div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
+                    <div class="blank_slot mon17"></div>
+                    <div class="blank_slot tue17"> </div>
+                    <div class="blank_slot wed17"> </div>
+                    <div class="blank_slot thu17"> </div>
+                    <div class="blank_slot fri17"> </div>
                 </div>
                 <div class="row">
                     <div class="time">18:00</div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
-                    <div class="blank_slot"></div>
+                    <div class="blank_slot mon18"></div>
+                    <div class="blank_slot tue18"> </div>
+                    <div class="blank_slot wed18"> </div>
+                    <div class="blank_slot thu18"> </div>
+                    <div class="blank_slot fri18"> </div>
                 </div>
             </div>
         </div>
@@ -130,7 +130,7 @@
             <div class="formline">
                 <div class="formtext">
                     Participants:
-                </div><select size="5" multiple name="members" id="members">
+                </div><select size="5" multiple name="members" id="members" class="member-selector">
                     <option value="all">All members</option>
                     <option value="michael">Michael</option>
                     <option value="sergey">Sergey</option>
@@ -141,7 +141,7 @@
             <div class="formline">
                 <div class="formtext">
                     Day:
-                </div><select name="days" id="days">
+                </div><select name="days" id="days" class="day-selector">
                     <option value="mon">Monday</option>
                     <option value="tue">Tuesday</option>
                     <option value="wed">Wednesday</option>
@@ -152,7 +152,7 @@
             <div class="formline">
                 <div class="formtext">
                     Time:
-                </div><select name="time" id="time">
+                </div><select name="time" id="time" class="time-selector">
                     <option value="10">10:00</option>
                     <option value="11">11:00</option>
                     <option value="12">12:00</option>
@@ -166,7 +166,7 @@
             </div>
 
             <div class="button-container">
-                <button class="formbutton" onclick="window.open('', '_self', ''); window.close();">
+                <button class="formbutton">
                     Cancel
                 </button>
                 <button class="formbutton submit">

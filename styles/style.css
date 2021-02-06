@@ -18,6 +18,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 30px;
+  width: 100%;
 }
 
 .title {
@@ -93,7 +94,8 @@ body {
 }
 
 .calendar {
-  margin: 0px 20px;
+  margin: 0px 40px;
+  width: 100%;
 }
 
 .table_header {
@@ -121,7 +123,7 @@ body {
   background-color: #ac88bf;
 }
 
-.table_header div {
+.time {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -138,7 +140,7 @@ body {
   overflow: auto;
 }
 
-.row div {
+.header-slot {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -150,13 +152,25 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1.5px solid #d9bfb5;
+  border: 1.5px solid #a26953;
   padding: 10px;
   overflow: auto;
 }
 
 .view1 {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
 }
 
 .view2 {
@@ -173,6 +187,11 @@ body {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
 }
 
 .form {
@@ -256,16 +275,46 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  display: none;
   line-height: 10vh;
   text-align: center;
+  visibility: hidden;
 }
 
 .occupied {
-  width: 100px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
   background-color: green;
   border: 2px solid black;
   border-radius: 0.2em;
+}
+
+.eventinfo {
+  overflow: auto;
+}
+
+.blank_slot {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1.5px solid #a26953;
+  overflow: auto;
+}
+
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
