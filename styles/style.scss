@@ -233,6 +233,7 @@ $skin: #d9bfb5;
   background-color: green;
   border: 2px solid black;
   border-radius: 0.2em;
+  z-index: inherit;
 }
 
 .eventinfo {
@@ -253,4 +254,29 @@ $skin: #d9bfb5;
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.popup-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.popup {
+  width: 40vw;
+  height: 50vh;
+  background-color: white;
+}
+
+.close {
+  width: 30px;
+  height: 30px;
 }
