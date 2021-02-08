@@ -14,21 +14,23 @@ const timeSelector = document.querySelector(".time-selector");
 inputButton.addEventListener("click", addEvent);
 cancelButton.addEventListener("click", cancelFunc);
 
-console.log(document.querySelector(".day-selector").value);
-console.log(document.querySelector(".time-selector").value);
-console.log(typeof document.querySelector(".time-selector").value);
-
 //Save events in local storage
-/*function saveLocalEvents(eventDiv) {
-	let calendarEventList;
-	if (localStorage.getItem("calendarEventList") === null) {
+function saveLocalEvents(eventDiv) {
+	let calendarEventList = [];
+	console.log(calendarEventList);
+	window.localStorage.setItem(calendarEventList, undefined);
+	window.localStorage.getItem(calendarEventList);
+	if (calendarEventList === undefined) {
 		calendarEventList = [];
+		console.log(calendarEventList);
 	} else {
-		localStorage = JSON.parse(localStorage.getItem("calendarEventsList"));
+		window.localStorage = JSON.parse(localStorage.getItem("calendarEventList"));
 	}
 	calendarEventList.push(eventDiv);
 	localStorage.setItem("calendarEventList", JSON.stringify(calendarEventList));
-}*/
+	//let calendarEventList = [];
+	//console.log(calendarEventList);
+}
 
 //Functions
 
@@ -42,34 +44,36 @@ function filterEvents(e) {
 				div.style.display = "flex";
 				break;
 			case "michael":
-				if (div.classList.contains("michael")) {
+				if (
+					div.classList.contains("michael") ||
+					div.classList.contains("all")
+				) {
 					div.style.display = "flex";
 				} else {
 					div.style.display = "none";
 				}
 				break;
 			case "sergey":
-				if (div.classList.contains("sergey")) {
+				if (div.classList.contains("sergey") || div.classList.contains("all")) {
 					div.style.display = "flex";
 				} else {
 					div.style.display = "none";
 				}
 				break;
 			case "ivan":
-				if (div.classList.contains("ivan")) {
+				if (div.classList.contains("ivan") || div.classList.contains("all")) {
 					div.style.display = "flex";
 				} else {
 					div.style.display = "none";
 				}
 				break;
 			case "olga":
-				if (div.classList.contains("olga")) {
+				if (div.classList.contains("olga") || div.classList.contains("all")) {
 					div.style.display = "flex";
 				} else {
 					div.style.display = "none";
 				}
 				break;
-				
 		}
 	});
 }
@@ -95,7 +99,8 @@ function addEvent(event) {
 	const closeButton = document.createElement("button");
 	closeButton.classList.add("close");
 	closeButton.addEventListener("click", deleteEvent);
-	closeButton.innerText = "X";
+	closeButton.innerHTML =
+		'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>';
 	eventDiv.appendChild(eventInfo);
 	eventDiv.appendChild(closeButton);
 	//Append div slots
@@ -109,6 +114,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			saveLocalEvents(eventInfo.innerHTML);
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -116,7 +122,6 @@ function addEvent(event) {
 			document.querySelector(".errormsg_container").style.visibility = "hidden";
 			document.querySelector(".view2").style.visibility = "hidden";
 			document.querySelector(".view1").style.visibility = "visible";
-			//saveLocalEvents(eventInfo.value);
 		} else if (document.querySelector(".mon10").childElementCount >= 1) {
 			document.querySelector(".errormsg_container").style.visibility =
 				"visible";
@@ -131,6 +136,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			saveLocalEvents(eventInfo.innerHTML);
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -138,7 +144,6 @@ function addEvent(event) {
 			document.querySelector(".errormsg_container").style.visibility = "hidden";
 			document.querySelector(".view2").style.visibility = "hidden";
 			document.querySelector(".view1").style.visibility = "visible";
-			//saveLocalEvents(eventInfo.value);
 		} else if (document.querySelector(".mon11").childElementCount >= 1) {
 			document.querySelector(".errormsg_container").style.visibility =
 				"visible";
@@ -1084,4 +1089,3 @@ function deleteEvent(event) {
 	}
 	return;
 }
-
