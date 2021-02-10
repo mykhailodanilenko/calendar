@@ -20,11 +20,13 @@ $skin: #d9bfb5;
 
 // make a grid line template:
 @mixin gridline {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  grid-column-start: 1;
-  grid-column-end: 6;
-  justify-items: center;
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr))!important;
+  grid-column-start: 1!important;
+  grid-column-end: 6!important;
+  justify-items: center!important;
+  grid-gap: 1px;
+  height: 50px;
 }
 
 //adjust the header
@@ -42,7 +44,7 @@ $skin: #d9bfb5;
 }
 
 .dropdown {
-  margin-left: auto;
+  margin-left: auto !important;
   margin-right: 20px;
   display: block;
   font-size: 16px;
@@ -52,7 +54,7 @@ $skin: #d9bfb5;
   color: $dark;
   line-height: 1.3;
   padding: .6em 1.4em .6em .8em;
-  width: 20%;
+  width: 20% !important;
   max-width: 100%;
   box-sizing: border-box;
   border: 1px solid #aaa;
@@ -70,7 +72,8 @@ $skin: #d9bfb5;
 }
 
 .create-btn {
-  width: 120px;
+  height: 50px;
+  /* width: 120px;
   font-size: 16px;
   height: 50px;
   font-family: Noto Sans KR, sans-serif;
@@ -79,9 +82,9 @@ $skin: #d9bfb5;
   border-radius: .5em;
   line-height: 1.3;
   border: 1px solid #aaa;
-  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-  linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04); */
+  //background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+  //linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
 }
 
 .create-btn a {
@@ -105,30 +108,37 @@ $skin: #d9bfb5;
 }
 //set the appearance of the table
 .calendar {
-  margin: 0px 40px;
+  margin: 0px 0px;
   width: 100%;
+  padding: 0px 1px;
+  background-color: gray;
+  font-size: 1.15em;
 }
 
 .table_header {
   @include gridline();
-  background-color: $dark;
-  color: $text;
+  background-color: $dark !important;
+  color: $text!important;
+  margin: 1px 0px 0px 0px;
 }
 
-.row {
+.rowe {
   @include gridline();
-  background-color: $main;
-}
+  background-color: $main !important;
+  margin: 1px 0px 0px 0px;
+  color: white;
+} 
 
 .time {
   width: 100%;
+  color: black;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1.5px solid darken($skin, 30%);
   padding: 10px;
   overflow: auto;
+  background-color: lightgrey;
 }
 
 .header-slot {
@@ -137,7 +147,6 @@ $skin: #d9bfb5;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1.5px solid darken($skin, 30%);
   padding: 10px;
   overflow: auto;
 }
@@ -151,6 +160,7 @@ $skin: #d9bfb5;
   left: 0;
   z-index: 1;
   width: 100%;
+  height: 100%;
 }
 
 .view2 {
@@ -218,6 +228,8 @@ $skin: #d9bfb5;
 
 .errormsg_container {
   background-color: red;
+  color: white;
+  font-size: 1.5em;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -229,14 +241,43 @@ $skin: #d9bfb5;
 
 .occupied {
   width: 100%;
-  height: 100%;
-  background-color: green;
-  border: 2px solid black;
+  height: 50px;
+  color: #084298;
+  background-color: #cfe2ff;
+  border-color: #b6d4fe;
+  border: 3px solid #b6d4fe;
   border-radius: 0.2em;
   z-index: inherit;
+  display: flex;
+  flex-direction: row;
 }
 
+.close {
+  justify-self: flex-end;
+  margin: 0.4em;
+  margin-left: auto;
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.2em;
+}
+
+.close:hover {
+  color: #fff;
+  background-color: #5c636a;
+  border-color: #565e64;
+}
 .eventinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 67%;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  text-align: center;
   overflow: auto;
 }
 
@@ -246,8 +287,6 @@ $skin: #d9bfb5;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1.5px solid darken($skin, 30%);
-  overflow: auto;
 }
 
 .container {
@@ -280,3 +319,4 @@ $skin: #d9bfb5;
   width: 30px;
   height: 30px;
 }
+

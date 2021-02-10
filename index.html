@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="icon" type="image/png" href="assets/icons8-timeline-week-48.png">
 </head>
 
@@ -13,21 +14,21 @@
     <div class="view1">
         <div class="top">
             <span class="title">Calendar</span>
-            <select name="filter" id="filter" class="dropdown">
+            <select name="filter" id="filter" class="dropdown form-select">
                 <option value="all">All members</option>
                 <option value="michael">Michael</option>
                 <option value="sergey">Sergey</option>
                 <option value="ivan">Ivan</option>
                 <option value="olga">Olga</option>
             </select>
-            <button class="create-btn"
+            <button class="create-btn btn btn-primary"
                 onclick="document.querySelector('.view1').style.visibility='hidden'; document.querySelector('.view2').style.visibility='visible'">
                 New event +
             </button>
         </div>
         <div class="container">
             <div class="calendar">
-                <div class="table_header">
+                <div class="table_header bg-primary">
                     <div class="header-slot">Time</div>
                     <div class="header-slot">Monday</div>
                     <div class="header-slot">Tuesday</div>
@@ -35,77 +36,77 @@
                     <div class="header-slot">Thursday</div>
                     <div class="header-slot">Friday</div>
                 </div>
-                <div class="row">
+                <div class="rowe bg-dark">
                     <div class="time">10:00</div>
-                    <div class="blank_slot mon10"></div>
-                    <div class="blank_slot tue10"> </div>
-                    <div class="blank_slot wed10"> </div>
-                    <div class="blank_slot thu10"> </div>
-                    <div class="blank_slot fri10"> </div>
+                    <div class="blank_slot bg-light mon10"></div>
+                    <div class="blank_slot bg-light tue10"> </div>
+                    <div class="blank_slot bg-light wed10"> </div>
+                    <div class="blank_slot bg-light thu10"> </div>
+                    <div class="blank_slot bg-light fri10"> </div>
                 </div>
-                <div class="row">
+                <div class="rowe bg-dark">
                     <div class="time">11:00</div>
-                    <div class="blank_slot mon11"></div>
-                    <div class="blank_slot tue11"> </div>
-                    <div class="blank_slot wed11"> </div>
-                    <div class="blank_slot thu11"> </div>
-                    <div class="blank_slot fri11"> </div>
+                    <div class="blank_slot bg-light mon11"></div>
+                    <div class="blank_slot bg-light tue11"> </div>
+                    <div class="blank_slot bg-light wed11"> </div>
+                    <div class="blank_slot bg-light thu11"> </div>
+                    <div class="blank_slot bg-light fri11"> </div>
                 </div>
-                <div class="row">
+                <div class="rowe bg-dark">
                     <div class="time">12:00</div>
-                    <div class="blank_slot mon12"></div>
-                    <div class="blank_slot tue12"> </div>
-                    <div class="blank_slot wed12"> </div>
-                    <div class="blank_slot thu12"> </div>
-                    <div class="blank_slot fri12"> </div>
+                    <div class="blank_slot bg-light mon12"></div>
+                    <div class="blank_slot bg-light tue12"> </div>
+                    <div class="blank_slot bg-light wed12"> </div>
+                    <div class="blank_slot bg-light thu12"> </div>
+                    <div class="blank_slot bg-light fri12"> </div>
                 </div>
-                <div class="row">
+                <div class="rowe bg-dark">
                     <div class="time">13:00</div>
-                    <div class="blank_slot mon13"></div>
-                    <div class="blank_slot tue13"> </div>
-                    <div class="blank_slot wed13"> </div>
-                    <div class="blank_slot thu13"> </div>
-                    <div class="blank_slot fri13"> </div>
+                    <div class="blank_slot bg-light mon13"></div>
+                    <div class="blank_slot bg-light tue13"> </div>
+                    <div class="blank_slot bg-light wed13"> </div>
+                    <div class="blank_slot bg-light thu13"> </div>
+                    <div class="blank_slot bg-light fri13"> </div>
                 </div>
-                <div class="row">
+                <div class="rowe bg-dark">
                     <div class="time">14:00</div>
-                    <div class="blank_slot mon14"></div>
-                    <div class="blank_slot tue14"> </div>
-                    <div class="blank_slot wed14"> </div>
-                    <div class="blank_slot thu14"> </div>
-                    <div class="blank_slot fri14"> </div>
+                    <div class="blank_slot bg-light mon14"></div>
+                    <div class="blank_slot bg-light tue14"> </div>
+                    <div class="blank_slot bg-light wed14"> </div>
+                    <div class="blank_slot bg-light thu14"> </div>
+                    <div class="blank_slot bg-light fri14"> </div>
                 </div>
-                <div class="row">
+                <div class="rowe bg-dark">
                     <div class="time">15:00</div>
-                    <div class="blank_slot mon15"></div>
-                    <div class="blank_slot tue15"> </div>
-                    <div class="blank_slot wed15"> </div>
-                    <div class="blank_slot thu15"> </div>
-                    <div class="blank_slot fri15"> </div>
+                    <div class="blank_slot bg-light mon15"></div>
+                    <div class="blank_slot bg-light tue15"> </div>
+                    <div class="blank_slot bg-light wed15"> </div>
+                    <div class="blank_slot bg-light thu15"> </div>
+                    <div class="blank_slot bg-light fri15"> </div>
                 </div>
-                <div class="row">
+                <div class="rowe bg-dark">
                     <div class="time">16:00</div>
-                    <div class="blank_slot mon16"></div>
-                    <div class="blank_slot tue16"> </div>
-                    <div class="blank_slot wed16"> </div>
-                    <div class="blank_slot thu16"> </div>
-                    <div class="blank_slot fri16"> </div>
+                    <div class="blank_slot bg-light mon16"></div>
+                    <div class="blank_slot bg-light tue16"> </div>
+                    <div class="blank_slot bg-light wed16"> </div>
+                    <div class="blank_slot bg-light thu16"> </div>
+                    <div class="blank_slot bg-light fri16"> </div>
                 </div>
-                <div class="row">
+                <div class="rowe bg-dark">
                     <div class="time">17:00</div>
-                    <div class="blank_slot mon17"></div>
-                    <div class="blank_slot tue17"> </div>
-                    <div class="blank_slot wed17"> </div>
-                    <div class="blank_slot thu17"> </div>
-                    <div class="blank_slot fri17"> </div>
+                    <div class="blank_slot bg-light mon17"></div>
+                    <div class="blank_slot bg-light tue17"> </div>
+                    <div class="blank_slot bg-light wed17"> </div>
+                    <div class="blank_slot bg-light thu17"> </div>
+                    <div class="blank_slot bg-light fri17"> </div>
                 </div>
-                <div class="row">
+                <div class="rowe bg-dark">
                     <div class="time">18:00</div>
-                    <div class="blank_slot mon18"></div>
-                    <div class="blank_slot tue18"> </div>
-                    <div class="blank_slot wed18"> </div>
-                    <div class="blank_slot thu18"> </div>
-                    <div class="blank_slot fri18"> </div>
+                    <div class="blank_slot bg-light mon18"></div>
+                    <div class="blank_slot bg-light tue18"> </div>
+                    <div class="blank_slot bg-light wed18"> </div>
+                    <div class="blank_slot bg-light thu18"> </div>
+                    <div class="blank_slot bg-light fri18"> </div>
                 </div>
             </div>
         </div>
@@ -120,11 +121,11 @@
                 Failed to create an event. Time slot is already booked.
             </div>
         </div>
-        <form class="form">
+        <form class="form" id="form1" onsubmit="function submitPrevent(event){preventDefault();}">
             <div class="formline">
                 <div class="formtext">
                     Name of the event:
-                </div><input type="text" class="name-input"> <br>
+                </div><input type="text" class="name-input" required="required"> <br>
             </div>
             <div class="formline">
                 <div class="formtext">
@@ -168,7 +169,7 @@
                 <button class="formbutton cancel">
                     Cancel
                 </button>
-                <button class="formbutton submit">
+                <button class="formbutton submit btn btn-primary" type="button" form="form1">
                     Create
                 </button>
             </div>
