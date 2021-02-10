@@ -17,7 +17,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px;
+  padding: 20px;
   width: 100%;
 }
 
@@ -93,7 +93,11 @@ body {
 
 .calendar {
   margin: 0px 0px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
+  display: inline;
   padding: 0px 1px;
   background-color: gray;
   font-size: 1.15em;
@@ -112,7 +116,7 @@ body {
   height: 50px;
   background-color: #232653 !important;
   color: white !important;
-  margin: 1px 0px 0px 0px;
+  margin: 1px 0px 1px 0px;
 }
 
 .rowe {
@@ -127,7 +131,7 @@ body {
   grid-gap: 1px;
   height: 50px;
   background-color: #ac88bf !important;
-  margin: 1px 0px 0px 0px;
+  margin: 0px 0px 1px 0px;
   color: white;
 }
 
@@ -219,7 +223,7 @@ body {
 }
 
 .formline {
-  width: 100%;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,7 +253,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
+  width: 70%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -381,8 +385,8 @@ body {
   top: 0;
   left: 0;
   z-index: 3;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -400,6 +404,47 @@ body {
   width: 40vw;
   height: 50vh;
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.popup-text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin: 20px;
+  font-size: 2em;
+}
+
+.popup button {
+  width: 4em;
+  margin: 20px;
+}
+
+.button-container-form {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  justify-self: end;
 }
 
 .close {
