@@ -33,7 +33,7 @@ $skin: #d9bfb5;
 .top {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 20px 150px;
   width: 100%;
 }
 
@@ -112,7 +112,7 @@ $skin: #d9bfb5;
   height: fit-content;
   width: 100%;
   display: inline;
-  padding: 0px 1px;
+  padding: 0px 0px;
   background-color: gray;
   font-size: 1.15em;
 }
@@ -121,13 +121,14 @@ $skin: #d9bfb5;
   @include gridline();
   background-color: $dark !important;
   color: $text!important;
-  margin: 1px 0px 1px 0px;
+  margin: 0;
+  width: 100%;
 }
 
 .rowe {
   @include gridline();
   background-color: $main !important;
-  margin: 0px 0px 1px 0px;
+  margin: 0px 1px 1px 1px;
   color: white;
 } 
 

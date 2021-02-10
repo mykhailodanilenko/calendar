@@ -17,7 +17,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
+  padding: 20px 150px;
   width: 100%;
 }
 
@@ -98,7 +98,7 @@ body {
   height: fit-content;
   width: 100%;
   display: inline;
-  padding: 0px 1px;
+  padding: 0px 0px;
   background-color: gray;
   font-size: 1.15em;
 }
@@ -116,7 +116,8 @@ body {
   height: 50px;
   background-color: #232653 !important;
   color: white !important;
-  margin: 1px 0px 1px 0px;
+  margin: 0;
+  width: 100%;
 }
 
 .rowe {
@@ -131,7 +132,7 @@ body {
   grid-gap: 1px;
   height: 50px;
   background-color: #ac88bf !important;
-  margin: 0px 0px 1px 0px;
+  margin: 0px 1px 1px 1px;
   color: white;
 }
 
