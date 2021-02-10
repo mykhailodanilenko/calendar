@@ -34,7 +34,6 @@ function populateCalendar(event) {
 			oldEventDiv.outerHTML = localStorage.getItem(key);
 		} else if (key == "mon11event") {
 			document.querySelector(".mon11").appendChild(oldEventDiv);
-
 			oldEventDiv.outerHTML = localStorage.getItem(key);
 		} else if (key == "mon12event") {
 			document.querySelector(".mon12").appendChild(oldEventDiv);
@@ -1267,7 +1266,7 @@ function addEvent(event) {
 				"visible";
 		}
 	}
-	saveLocalEvents(eventDiv.id, eventDiv.outerHTML);
+	if (eventDiv.id !== "") {saveLocalEvents(eventDiv.id, eventDiv.outerHTML)};
 }
 
 function deleteEvent(event) {
