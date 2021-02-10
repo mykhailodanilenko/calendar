@@ -33,14 +33,13 @@ $skin: #d9bfb5;
 .top {
   display: flex;
   align-items: center;
-  padding: 20px 150px;
+  padding: 20px 120px;
   width: 100%;
 }
 
 .title {
   font-size: 2em;
   font-weight: bold;
-  margin-left: 20px;
 }
 
 .dropdown {
@@ -292,10 +291,11 @@ $skin: #d9bfb5;
   align-items: center;
 }
 
-.container {
+.container1 {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin: 0 120px;
 }
 
 .popup-container {
