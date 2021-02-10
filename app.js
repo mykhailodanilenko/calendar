@@ -15,21 +15,163 @@ inputButton.addEventListener("click", addEvent);
 cancelButton.addEventListener("click", cancelFunc);
 
 //Save events in local storage
-function saveLocalEvents(eventDiv) {
-	let calendarEventList = [];
-	console.log(calendarEventList);
-	window.localStorage.setItem(calendarEventList, undefined);
-	window.localStorage.getItem(calendarEventList);
-	if (calendarEventList === undefined) {
-		calendarEventList = [];
-		console.log(calendarEventList);
-	} else {
-		window.localStorage = JSON.parse(localStorage.getItem("calendarEventList"));
-	}
-	calendarEventList.push(eventDiv);
-	localStorage.setItem("calendarEventList", JSON.stringify(calendarEventList));
-	//let calendarEventList = [];
-	//console.log(calendarEventList);
+function saveLocalEvents(x, y) {
+	localStorage.setItem(x, y);
+}
+
+//Populate with localstorage items
+window.addEventListener("load", populateCalendar);
+function populateCalendar(event) {
+	Object.keys(localStorage).forEach((key) => {
+		console.log(key);
+		console.log(key);
+		const oldEventDiv = document.createElement("div");
+		/* const oldEventDivId = element;
+		console.log(oldEventDivId);
+		console.log(key); */
+		if (key == "mon10event") {
+			document.querySelector(".mon10").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "mon11event") {
+			document.querySelector(".mon11").appendChild(oldEventDiv);
+
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "mon12event") {
+			document.querySelector(".mon12").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "mon13event") {
+			document.querySelector(".mon13").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "mon14event") {
+			document.querySelector(".mon14").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "mon15event") {
+			document.querySelector(".mon15").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "mon16event") {
+			document.querySelector(".mon16").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "mon17event") {
+			document.querySelector(".mon17").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "mon18event") {
+			document.querySelector(".mon18").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "tue10event") {
+			document.querySelector(".tue10").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "tue11event") {
+			document.querySelector(".tue11").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "tue12event") {
+			document.querySelector(".tue12").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "tue13event") {
+			document.querySelector(".tue13").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "tue14event") {
+			document.querySelector(".tue14").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "tue15event") {
+			document.querySelector(".tue15").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "tue16event") {
+			document.querySelector(".tue16").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "tue17event") {
+			document.querySelector(".tue17").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "tue18event") {
+			document.querySelector(".tue18").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "wed10event") {
+			document.querySelector(".wed10").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "wed11event") {
+			document.querySelector(".wed11").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "wed12event") {
+			document.querySelector(".wed12").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "wed13event") {
+			document.querySelector(".wed13").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "wed14event") {
+			document.querySelector(".wed14").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "wed15event") {
+			document.querySelector(".wed15").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "wed16event") {
+			document.querySelector(".wed16").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "wed17event") {
+			document.querySelector(".wed17").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "wed18event") {
+			document.querySelector(".wed18").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "thu10event") {
+			document.querySelector(".thu10").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "thu11event") {
+			document.querySelector(".thu11").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "thu12event") {
+			document.querySelector(".thu12").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "thu13event") {
+			document.querySelector(".thu13").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "thu14event") {
+			document.querySelector(".thu14").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "thu15event") {
+			document.querySelector(".thu15").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "thu16event") {
+			document.querySelector(".thu16").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "thu17event") {
+			document.querySelector(".thu17").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "thu18event") {
+			document.querySelector(".thu18").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "fri10event") {
+			document.querySelector(".fri10").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "fri11event") {
+			document.querySelector(".fri11").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "fri12event") {
+			document.querySelector(".fri12").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "fri13event") {
+			document.querySelector(".fri13").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "fri14event") {
+			document.querySelector(".fri14").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "fri15event") {
+			document.querySelector(".fri15").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "fri16event") {
+			document.querySelector(".fri16").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "fri17event") {
+			document.querySelector(".fri17").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		} else if (key == "fri18event") {
+			document.querySelector(".fri18").appendChild(oldEventDiv);
+			oldEventDiv.outerHTML = localStorage.getItem(key);
+		}
+		let closeButtons = document.querySelectorAll(".close");
+		console.log(closeButtons);
+		closeButtons.forEach((element) => {
+			element.addEventListener("click", deleteEvent);
+		});
+	});
 }
 
 //Functions
@@ -114,7 +256,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
-			saveLocalEvents(eventInfo.innerHTML);
+			eventDiv.id = "mon10event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -136,7 +278,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
-			saveLocalEvents(eventInfo.innerHTML);
+			eventDiv.id = "mon11event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -158,6 +300,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "mon12event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -179,6 +323,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "mon13event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -200,6 +346,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "mon14event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -221,6 +368,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "mon15event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -242,6 +391,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "mon16event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -263,6 +414,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "mon17event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -284,6 +437,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "mon18event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -306,6 +461,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "tue10event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -327,6 +484,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "tue11event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -348,6 +507,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "tue12event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -369,6 +530,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "tue13event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -390,6 +553,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "tue14event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -411,6 +576,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "tue15event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -432,6 +599,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "tue16event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -453,6 +622,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "tue17event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -474,6 +645,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "tue18event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -496,6 +669,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "wed10event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -517,6 +692,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "wed11event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -538,6 +715,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "wed12event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -559,6 +738,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "wed13event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -580,6 +761,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "wed14event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -601,6 +783,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "wed15event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -622,6 +805,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "wed16event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -643,6 +827,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "wed17event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -664,6 +849,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "wed18event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -686,6 +873,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "thu10event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -707,6 +895,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "thu11event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -728,6 +918,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "thu12event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -749,6 +941,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "thu13event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -770,6 +964,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "thu14event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -791,6 +987,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "thu15event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -812,6 +1010,8 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+
+			eventDiv.id = "thu16event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -833,6 +1033,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "thu17event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -854,6 +1055,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "thu18event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -876,6 +1078,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "fri10event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -897,6 +1100,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "fri11event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -918,6 +1122,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "fri12event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -939,6 +1144,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "fri13event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -960,6 +1166,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "fri14event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -981,6 +1188,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "fri15event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -1002,6 +1210,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "fri16event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -1023,6 +1232,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "fri17event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -1044,6 +1254,7 @@ function addEvent(event) {
 				...document.querySelector(".member-selector").selectedOptions,
 			].map((option) => option.value);
 			eventDiv.classList.add(...participants);
+			eventDiv.id = "fri18event";
 			document.querySelector(".name-input").value = "";
 			document.querySelector(".day-selector").value = "mon";
 			document.querySelector(".time-selector").value = 10;
@@ -1056,6 +1267,7 @@ function addEvent(event) {
 				"visible";
 		}
 	}
+	saveLocalEvents(eventDiv.id, eventDiv.outerHTML);
 }
 
 function deleteEvent(event) {
@@ -1073,7 +1285,7 @@ function deleteEvent(event) {
 		.querySelector(".confirm-delete")
 		.addEventListener("click", confirmDelete);
 	function confirmDelete(event) {
-		console.log(event.currentTarget);
+		localStorage.removeItem(buttonTarget.parentElement.id);
 		buttonTarget.parentElement.remove();
 		popupText.remove();
 		evTitle = "";

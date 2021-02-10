@@ -20,9 +20,10 @@
                 <option value="ivan">Ivan</option>
                 <option value="olga">Olga</option>
             </select>
-            <button class="create-btn" onclick="document.querySelector('.view1').style.visibility='hidden'; document.querySelector('.view2').style.visibility='visible'">
-                    New event +
-                </button>
+            <button class="create-btn"
+                onclick="document.querySelector('.view1').style.visibility='hidden'; document.querySelector('.view2').style.visibility='visible'">
+                New event +
+            </button>
         </div>
         <div class="container">
             <div class="calendar">
@@ -129,11 +130,11 @@
                 <div class="formtext">
                     Participants:
                 </div><select size="5" multiple name="members" id="members" class="member-selector">
-                    <option value='all'>All members</option>
-                    <option value="michael">Michael</option>
-                    <option value="sergey">Sergey</option>
-                    <option value="ivan">Ivan</option>
-                    <option value="olga">Olga</option>
+                    <option value="all" id="all-user-selector">All members</option>
+                    <option value="michael" id="michael-user-selector">Michael</option>
+                    <option value="sergey" id="sergey-user-selector">Sergey</option>
+                    <option value="ivan" id="ivan-user-selector">Ivan</option>
+                    <option value="olga" id="olga-user-selector">Olga</option>
                 </select>
             </div>
             <div class="formline">
