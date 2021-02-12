@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <div class="view1">
-        <div class="top">
+    <div class="view-calendar">
+        <div class="menu">
             <span class="title">Calendar</span>
             <select name="filter" id="filter" class="dropdown form-select">
                 <option value="all">All members</option>
@@ -22,11 +22,11 @@
                 <option value="olga">Olga</option>
             </select>
             <button class="create-btn btn btn-primary"
-                onclick="document.querySelector('.view1').style.visibility='hidden'; document.querySelector('.view2').style.visibility='visible'">
+                onclick="document.querySelector('.view-calendar').style.visibility='hidden'; document.querySelector('.view-addevent').style.visibility='visible'">
                 New event +
             </button>
         </div>
-        <div class="container1">
+        <div class="container-calendar">
             <div class="calendar">
                 <div class="table_header bg-primary">
                     <div class="header-slot">Time</div>
@@ -36,7 +36,7 @@
                     <div class="header-slot">Thursday</div>
                     <div class="header-slot">Friday</div>
                 </div>
-                <div class="rowe bg-dark">
+                <div class="calendar__row bg-dark">
                     <div class="time">10:00</div>
                     <div class="blank_slot bg-light mon10"></div>
                     <div class="blank_slot bg-light tue10"> </div>
@@ -44,7 +44,7 @@
                     <div class="blank_slot bg-light thu10"> </div>
                     <div class="blank_slot bg-light fri10"> </div>
                 </div>
-                <div class="rowe bg-dark">
+                <div class="calendar__row bg-dark">
                     <div class="time">11:00</div>
                     <div class="blank_slot bg-light mon11"></div>
                     <div class="blank_slot bg-light tue11"> </div>
@@ -52,7 +52,7 @@
                     <div class="blank_slot bg-light thu11"> </div>
                     <div class="blank_slot bg-light fri11"> </div>
                 </div>
-                <div class="rowe bg-dark">
+                <div class="calendar__row bg-dark">
                     <div class="time">12:00</div>
                     <div class="blank_slot bg-light mon12"></div>
                     <div class="blank_slot bg-light tue12"> </div>
@@ -60,7 +60,7 @@
                     <div class="blank_slot bg-light thu12"> </div>
                     <div class="blank_slot bg-light fri12"> </div>
                 </div>
-                <div class="rowe bg-dark">
+                <div class="calendar__row bg-dark">
                     <div class="time">13:00</div>
                     <div class="blank_slot bg-light mon13"></div>
                     <div class="blank_slot bg-light tue13"> </div>
@@ -68,7 +68,7 @@
                     <div class="blank_slot bg-light thu13"> </div>
                     <div class="blank_slot bg-light fri13"> </div>
                 </div>
-                <div class="rowe bg-dark">
+                <div class="calendar__row bg-dark">
                     <div class="time">14:00</div>
                     <div class="blank_slot bg-light mon14"></div>
                     <div class="blank_slot bg-light tue14"> </div>
@@ -76,7 +76,7 @@
                     <div class="blank_slot bg-light thu14"> </div>
                     <div class="blank_slot bg-light fri14"> </div>
                 </div>
-                <div class="rowe bg-dark">
+                <div class="calendar__row bg-dark">
                     <div class="time">15:00</div>
                     <div class="blank_slot bg-light mon15"></div>
                     <div class="blank_slot bg-light tue15"> </div>
@@ -84,7 +84,7 @@
                     <div class="blank_slot bg-light thu15"> </div>
                     <div class="blank_slot bg-light fri15"> </div>
                 </div>
-                <div class="rowe bg-dark">
+                <div class="calendar__row bg-dark">
                     <div class="time">16:00</div>
                     <div class="blank_slot bg-light mon16"></div>
                     <div class="blank_slot bg-light tue16"> </div>
@@ -92,7 +92,7 @@
                     <div class="blank_slot bg-light thu16"> </div>
                     <div class="blank_slot bg-light fri16"> </div>
                 </div>
-                <div class="rowe bg-dark">
+                <div class="calendar__row bg-dark">
                     <div class="time">17:00</div>
                     <div class="blank_slot bg-light mon17"></div>
                     <div class="blank_slot bg-light tue17"> </div>
@@ -100,7 +100,7 @@
                     <div class="blank_slot bg-light thu17"> </div>
                     <div class="blank_slot bg-light fri17"> </div>
                 </div>
-                <div class="rowe bg-dark">
+                <div class="calendar__row bg-dark">
                     <div class="time">18:00</div>
                     <div class="blank_slot bg-light mon18"></div>
                     <div class="blank_slot bg-light tue18"> </div>
@@ -111,13 +111,9 @@
             </div>
         </div>
     </div>
-    <!---<div class="occupied">
-        <div class="eventinfo"></div>
-        <button class="deletebtn">X</button>
-    </div>--->
-    <div class="view2">
-        <div class="errormsg_wrapper">
-            <div class="errormsg_container">
+    <div class="view-addevent">
+        <div class="errormsg-wrapper">
+            <div class="errormsg-container">
                 Failed to create an event. Time slot is already booked.
             </div>
         </div>
@@ -183,6 +179,6 @@
         </div>
     </div>
 </body>
-<script src="alt.js"></script>
+<script src="app.js"></script>
 
 </html>

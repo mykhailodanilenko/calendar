@@ -30,7 +30,7 @@ $skin: #d9bfb5;
 }
 
 //adjust the header
-.top {
+.menu {
   align-items: center;
   display: flex;
   padding: 20px 120px;
@@ -106,7 +106,7 @@ $skin: #d9bfb5;
   width: 100%;
 }
 
-.rowe {
+.calendar__row {
   @include gridline();
   background-color: $main !important;
   color: white;
@@ -135,7 +135,7 @@ $skin: #d9bfb5;
   width: 100%;
 }
 
-.view1 {
+.view-calendar {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
@@ -147,7 +147,7 @@ $skin: #d9bfb5;
   z-index: 1;
 }
 
-.view2 {
+.view-addevent {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -201,7 +201,7 @@ $skin: #d9bfb5;
   padding: 10px;
 }
 
-.errormsg_wrapper {
+.errormsg-wrapper {
   align-items: center;
   display: flex;
   height: 10vh;
@@ -210,7 +210,7 @@ $skin: #d9bfb5;
   width: 100vw;
 }
 
-.errormsg_container {
+.errormsg-container {
   background-color: red;
   color: white;
   font-size: 1.5em;
@@ -274,7 +274,7 @@ $skin: #d9bfb5;
   width: 100%;
 }
 
-.container1 {
+.container-calendar {
   display: flex;
   justify-content: center;
   margin: 0 120px;

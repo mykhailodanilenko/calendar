@@ -10,7 +10,7 @@ body {
   padding: 0;
 }
 
-.top {
+.menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -105,7 +105,7 @@ body {
   width: 100%;
 }
 
-.rowe {
+.calendar__row {
   display: -ms-grid !important;
   display: grid !important;
   grid-column-end: 6 !important;
@@ -155,7 +155,7 @@ body {
   width: 100%;
 }
 
-.view1 {
+.view-calendar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,7 +172,7 @@ body {
   z-index: 1;
 }
 
-.view2 {
+.view-addevent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,7 +253,7 @@ body {
   padding: 10px;
 }
 
-.errormsg_wrapper {
+.errormsg-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -268,7 +268,7 @@ body {
   width: 100vw;
 }
 
-.errormsg_container {
+.errormsg-container {
   background-color: red;
   color: white;
   font-size: 1.5em;
@@ -356,7 +356,7 @@ body {
   width: 100%;
 }
 
-.container1 {
+.container-calendar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

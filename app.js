@@ -91,9 +91,9 @@ function defaults() {
 function cancelFunc(event) {
   event.preventDefault();
   defaults();
-  document.querySelector('.errormsg_container').style.visibility = 'hidden'; // hide the error message in case it was there
-  document.querySelector('.view2').style.visibility = 'hidden'; // close the add event menu
-  document.querySelector('.view1').style.visibility = 'visible'; // open the main calendar view
+  document.querySelector('.errormsg-container').style.visibility = 'hidden'; // hide the error message in case it was there
+  document.querySelector('.view-addevent').style.visibility = 'hidden'; // close the add event menu
+  document.querySelector('.view-calendar').style.visibility = 'visible'; // open the main calendar view
 }
 
 // Create an event
@@ -125,14 +125,14 @@ function addEvent(event) {
     eventDiv.classList.add(...participants); // add participants to the event info
     eventDiv.id = `${appendDivClass}event`;
     defaults();
-    document.querySelector('.errormsg_container').style.visibility = 'hidden';
-    document.querySelector('.view2').style.visibility = 'hidden';
-    document.querySelector('.view1').style.visibility = 'visible';
+    document.querySelector('.errormsg-container').style.visibility = 'hidden';
+    document.querySelector('.view-addevent').style.visibility = 'hidden';
+    document.querySelector('.view-calendar').style.visibility = 'visible';
   } else if (
     document.querySelector(`.${appendDivClass}`).childElementCount >= 1
   ) {
     // what if the slot is occupied
-    document.querySelector('.errormsg_container').style.visibility = 'visible'; // show the error message
+    document.querySelector('.errormsg-container').style.visibility = 'visible'; // show the error message
   }
   if (eventDiv.id !== '') {
     // guard against double div in one slot
