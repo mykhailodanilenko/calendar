@@ -155,7 +155,7 @@ function deleteEvent(event) {
     .addEventListener('click', confirmDelete);
   function confirmDelete(event) {
     localStorage.removeItem(buttonTarget.parentElement.id); // remove the event from local storage
-    buttonTarget.parentElement.remove(); // remove the event from the dom
+    buttonTarget.parentElement.remove(); // remove the event from the DOM
     popupText.remove(); // roll back the popup text
     evTitle = '';
     buttonTarget = null;
